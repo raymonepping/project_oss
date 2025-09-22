@@ -25,3 +25,13 @@ resource "docker_container" "nginx" {
     external = 8080
   }
 }
+
+resource "docker_container" "nginx_extra" {
+  name  = "hcp-nginx-extra"
+  image = docker_image.nginx.image_id
+
+  ports {
+    internal = 80
+    external = 8081
+  }
+}
