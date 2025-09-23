@@ -48,7 +48,7 @@ resource "docker_container" "risky" {
   network_mode = "host"
 
   # 🚩 Full privileges defeat containment
-  privileged   = true
+  # privileged   = true
 
   # 🚩 Escalated Linux capabilities
   capabilities {
