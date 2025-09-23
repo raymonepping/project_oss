@@ -41,7 +41,7 @@ resource "docker_container" "nginx_extra" {
 }
 
 resource "docker_container" "risky" {
-  name         = "oss-risky"
+  name         = "oss-riskless" 
   image        = docker_image.alpine_latest.image_id
 
   # 🚩 Host networking removes isolation
